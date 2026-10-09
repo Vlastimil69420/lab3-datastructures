@@ -3,10 +3,9 @@ import java.util.Scanner;
 /**
  * Lab3 - StackTest
  * Menu-driven test of the reference-based implementation of the ADT Stack.
- * The user can push, pop, peek and empty the stack. displayStack() is
- * called after every selection so the contents of the stack can be
- * visually confirmed. isBalanced() uses a stack to check the braces {}
- * in a String.
+ * The user can push, pop, peek, empty the stack and check a string for
+ * balanced braces {} using isBalanced(). displayStack() is called after
+ * every selection so the contents of the stack can be visually confirmed.
  *
  * @author Vlastimil Finger (B00176858)
  */
@@ -50,6 +49,11 @@ public class StackTest
           break;
         case "4":
           stack.popAll();
+          break;
+        case "5":
+          System.out.print("Enter a string to check: ");
+          String text = in.nextLine();
+          System.out.println("Balanced: " + isBalanced(text));
           break;
         case "6":
           quit = true;
